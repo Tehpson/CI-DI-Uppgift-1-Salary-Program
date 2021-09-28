@@ -4,7 +4,8 @@ using System.Text;
 
 namespace CI_DI_Uppgift_1_Salary_Program.Functions
 {
-    class User
+    class Admin : Account
     {
+
     }
 }

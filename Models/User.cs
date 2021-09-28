@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CI_DI_Uppgift_1_Salary_Program.Functions
+namespace CI_DI_Uppgift_1_Salary_Program.Models
 {
     class User : Account
     {
-        public User(string username, string password) : base(username, password)
+        public bool RequestChangeRole(Models.Role role)
         {
+            return false;
+        }
+        public bool RequestSalaryChange(float salary)
+        {
+            return false;
         }
     }
 }

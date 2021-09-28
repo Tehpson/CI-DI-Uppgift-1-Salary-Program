@@ -2,21 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CI_DI_Uppgift_1_Salary_Program.Functions
+namespace CI_DI_Uppgift_1_Salary_Program.Models
 {
     abstract class Account
     {
         public string Username { get; set; }
         public string Password { get; set; }
-        public int Saldo { get; set; }
-        public int Salary { get; set; }
+        public float Saldo { get; set; } = 0;
+        public float Salary { get; set; } = 0;
         public Role Role { get; set; }
 
-        public Account(string username,string password)
-        {
-            Username = username;
-            Password = password;
-        }
 
         public void AddSalary() => Saldo += Salary;
     }

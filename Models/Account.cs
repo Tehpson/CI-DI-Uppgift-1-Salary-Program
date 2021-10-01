@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CI_DI_Uppgift_1_Salary_Program.Models
 {
-    abstract class Account
+    public abstract class Account
     {
         public string Username { get; set; }
         public string Password { get; set; }
@@ -15,7 +15,7 @@ namespace CI_DI_Uppgift_1_Salary_Program.Models
 
         public void AddSalary() => Saldo += Salary;
     }
-    enum Role
+    public enum Role
     {
         Admin,
         CEO,

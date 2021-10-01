@@ -54,8 +54,9 @@
             // 
             // PWDTBX
             // 
-            this.PWDTBX.Location = new System.Drawing.Point(12, 52);
+            this.PWDTBX.Location = new System.Drawing.Point(13, 52);
             this.PWDTBX.Name = "PWDTBX";
+            this.PWDTBX.PasswordChar = '*';
             this.PWDTBX.PlaceholderText = "Password";
             this.PWDTBX.Size = new System.Drawing.Size(142, 23);
             this.PWDTBX.TabIndex = 2;

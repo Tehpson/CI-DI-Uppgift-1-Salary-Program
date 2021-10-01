@@ -26,13 +26,13 @@
             }
             else if (account.Role == Models.Role.Admin)
             {
-                var frm = new Forms.AdminForm();
+                var frm = new Forms.AdminForm((Models.Admin)account);
                 Hide();
                 frm.ShowDialog();
             }
             else
             {
-                var frm = new Forms.UserForm();
+                var frm = new Forms.UserForm(this,(Models.User)account);
                 Hide();
                 frm.ShowDialog();
             }

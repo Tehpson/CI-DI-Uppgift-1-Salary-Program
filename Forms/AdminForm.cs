@@ -10,7 +10,7 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
 {
     public partial class AdminForm : Form
     {
-        public AdminForm()
+        public AdminForm(Models.Admin admin)
         {
             InitializeComponent();
         }

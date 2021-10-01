@@ -21,5 +21,4 @@ namespace CI_DI_Uppgift_1_Salary_Program.Models
         CEO,
         Janitor,
         HR,
-    }
-}
+    }}

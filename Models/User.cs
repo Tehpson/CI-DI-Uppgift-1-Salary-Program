@@ -8,11 +8,13 @@ namespace CI_DI_Uppgift_1_Salary_Program.Models
     {
         public bool RequestChangeRole(Models.Role role)
         {
-            return false;
+            Data.Data.Requests.Add(new RequestRole(this, role));
+            return true;
         }
         public bool RequestSalaryChange(float salary)
         {
-            return false;
+            Data.Data.Requests.Add(new RequestSalary(this, salary));
+            return true;
         }
     }
 }

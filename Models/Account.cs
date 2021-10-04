@@ -15,6 +15,10 @@ namespace CI_DI_Uppgift_1_Salary_Program.Models
 
         public void AddSalary() => Saldo += Salary;
     }
+    public class AccountRoot
+    {
+        public List<Account> Accounts { get; set; }
+    }
     public enum Role
     {
         Admin,

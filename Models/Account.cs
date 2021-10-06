@@ -17,7 +17,7 @@ namespace CI_DI_Uppgift_1_Salary_Program.Models
     }
     public class AccountRoot
     {
-        public List<Account> Accounts { get; set; } = new List<Account>();
+        public List<Account> Accounts { get; set; }
     }
     public enum Role
     {

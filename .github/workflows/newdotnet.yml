@@ -19,10 +19,7 @@ jobs:
         dotnet-version: 3.1.x
     - name: Restore dependencies
       run: dotnet restorerestore
-      working-directory: CI-DI-Uppgift-1-Salary-Program
     - name: Build
       run: dotnet --no-restore
-      working-directory: CI-DI-Uppgift-1-Salary-Program
     - name: Test
       run: dotnet test --no-build --verbosity normalrestore
-      working-directory: CI-DI-Uppgift-1-Salary-ProgramTest

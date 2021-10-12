@@ -170,12 +170,13 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
             // 
             // givesalarybtn
             // 
-            this.givesalarybtn.Location = new System.Drawing.Point(153, 133);
+            this.givesalarybtn.Location = new System.Drawing.Point(153, 130);
             this.givesalarybtn.Name = "givesalarybtn";
             this.givesalarybtn.Size = new System.Drawing.Size(121, 23);
             this.givesalarybtn.TabIndex = 29;
             this.givesalarybtn.Text = "Give Salary";
             this.givesalarybtn.UseVisualStyleBackColor = true;
+            this.givesalarybtn.Click += new System.EventHandler(this.givesalarybtn_Click);
             // 
             // AdminForm
             // 

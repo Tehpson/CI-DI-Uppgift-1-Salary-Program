@@ -57,5 +57,13 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
             var frm = new Forms.DeleteAdminForm();
             frm.Show();
         }
+
+        private void givesalarybtn_Click(object sender, EventArgs e)
+        {
+            foreach (var user in Data.Data.Accounts)
+            {
+                user.AddSalary();
+            }
+        }
     }
 }

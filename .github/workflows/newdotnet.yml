@@ -20,8 +20,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
-      working-directory: CI-DI-Uppgift-1-Salary-Program
+      run: dotnet build CI-DI-Uppgift-1-Salary-Program.CI-DI-Uppgift-1-Salary-Program.sln --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normalrestore
       working-directory: CI-DI-Uppgift-1-Salary-ProgramTest

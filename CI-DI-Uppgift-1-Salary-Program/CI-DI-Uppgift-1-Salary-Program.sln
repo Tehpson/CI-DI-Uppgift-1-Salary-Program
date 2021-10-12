@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CI-DI-Uppgift-1-Salary-Program", "CI-DI-Uppgift-1-Salary-Program.csproj", "{CCAC04F4-E59D-4B9B-AC6A-376E4AF861F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CI-DI-Uppgift-1-Salary-ProgramTests", "..\CI-DI-Uppgift-1-Salary-ProgramTests\CI-DI-Uppgift-1-Salary-ProgramTests.csproj", "{208605CE-49F5-438B-9CF6-C8CCB81A0CB5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{CCAC04F4-E59D-4B9B-AC6A-376E4AF861F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCAC04F4-E59D-4B9B-AC6A-376E4AF861F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCAC04F4-E59D-4B9B-AC6A-376E4AF861F3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{208605CE-49F5-438B-9CF6-C8CCB81A0CB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{208605CE-49F5-438B-9CF6-C8CCB81A0CB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{208605CE-49F5-438B-9CF6-C8CCB81A0CB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{208605CE-49F5-438B-9CF6-C8CCB81A0CB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

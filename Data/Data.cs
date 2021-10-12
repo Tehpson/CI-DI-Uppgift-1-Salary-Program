@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CI_DI_Uppgift_1_Salary_Program.Data
 {
-    static class Data
+    public static class Data
     {
         static public List<Models.Account> Accounts { get; set; } = new List<Models.Account>();
         static public List<Models.Request> Requests { get; set; } = new List<Models.Request>();

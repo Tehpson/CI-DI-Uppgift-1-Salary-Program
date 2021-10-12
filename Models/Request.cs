@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CI_DI_Uppgift_1_Salary_Program.Models
 {
-    class Request
+    public class Request
     {
         public User User { get; set; }
     }

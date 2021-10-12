@@ -9,7 +9,7 @@ namespace CI_DI_Uppgift_1_Salary_Program.Models
         public string Username { get; set; }
         public string Password { get; set; }
         public float Saldo { get; set; } = 0;
-        public float Salary { get; set; } = 0;
+        public float Salary { get; set; } = 100;
         public Role Role { get; set; }
 
 

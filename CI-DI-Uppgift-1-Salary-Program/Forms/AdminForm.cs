@@ -11,6 +11,7 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
     public partial class AdminForm : Form
     {
         public LoginForm LoginForm { get; set; }
+        public Models.Admin Admin { get; set; }
         public AdminForm(Models.Admin admin, LoginForm loginForm)
         {
             InitializeComponent();
@@ -18,18 +19,29 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
             LoginForm = loginForm;
             salarylbl.Text = admin.Salary.ToString() + "SEK";
             saldolbl.Text = admin.Salary.ToString() + "SEK";
+            Admin = admin;
 
+        }
+
+        private static void UpdateListbox(ListBox listBox)
+        {
+            listBox.DataSource = null;
+            listBox.Items.Clear();
+            listBox.DataSource = Data.Data.Requests;
         }
 
         private void Acceptbtn_Click(object sender, EventArgs e)
         {
-            Models.Admin.AscceptRequest(requestList);
+            Admin.AscceptRequest((Models.Request)requestList.SelectedItem);
+
+            UpdateListbox(requestList);
         }
 
 
         private void Denybtn_Click(object sender, EventArgs e)
         {
-            Models.Admin.DenyRequest(requestList);
+            Admin.DenyRequest((Models.Request)requestList.SelectedItem);
+            UpdateListbox(requestList);
         }
 
         private void Logoutbtn_Click(object sender, EventArgs e)
@@ -46,7 +58,7 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
 
         private void givesalarybtn_Click(object sender, EventArgs e)
         {
-            Models.Admin.GiveSalary();
+            Admin.GiveSalary();
         }
     }
 }

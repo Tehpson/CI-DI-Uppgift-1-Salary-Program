@@ -7,34 +7,26 @@ namespace CI_DI_Uppgift_1_Salary_Program.Models
 {
     public class Admin : Account
     {
-        public static void AscceptRequest(ListBox listBox)
+        public void AscceptRequest(Models.Request request)
         {
-            var user = Data.Data.Accounts.Find(x => x == ((Models.Request)listBox.SelectedItem).User);
-            if (listBox.SelectedItem is Models.RequestRole roleitem)
+            var user = Data.Data.Accounts.Find(x => x == request.User);
+            if (request is Models.RequestRole roleitem)
             {
                 user.Role = roleitem.Role;
             }
-            else if (listBox.SelectedItem is Models.RequestSalary salaryitem)
+            else if (request is Models.RequestSalary salaryitem)
             {
                 user.Salary = salaryitem.Salary;
             }
-            Data.Data.Requests.Remove((Models.Request)listBox.SelectedItem);
-            UpdateListbox(listBox);
+            Data.Data.Requests.Remove(request);
         }
 
-        public static void DenyRequest(ListBox listBox)
+        public void DenyRequest(Models.Request request)
         {
-            Data.Data.Requests.Remove((Models.Request)listBox.SelectedItem);
-            UpdateListbox(listBox);
-        }
-        private static void UpdateListbox(ListBox listBox)
-        {
-            listBox.DataSource = null;
-            listBox.Items.Clear();
-            listBox.DataSource = Data.Data.Requests;
+            Data.Data.Requests.Remove(request);
         }
 
-        public static void GiveSalary()
+        public void GiveSalary()
         {
             foreach (var user in Data.Data.Accounts)
             {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace CI_DI_Uppgift_1_Salary_Program.Models
@@ -31,6 +32,22 @@ namespace CI_DI_Uppgift_1_Salary_Program.Models
             foreach (var user in Data.Data.Accounts)
             {
                 user.AddSalary();
+            }
+        }
+
+        public bool AddUser(string username, string password, Role role, float salary)
+        {
+            var hasNumber = new Regex(@"[0-9]+");
+            var hasUpperChar = new Regex(@"[A-Z]+");
+            var hasLowerChar = new Regex(@"[a-z]+");
+            if(hasNumber.IsMatch(password) && hasLowerChar.IsMatch(password) && hasUpperChar.IsMatch(password))
+            {
+                Data.Data.Accounts.Add(new Models.User { Username = username, Password = password, Role = role, Salary = salary });
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

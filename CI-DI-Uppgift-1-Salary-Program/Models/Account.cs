@@ -14,6 +14,8 @@ namespace CI_DI_Uppgift_1_Salary_Program.Models
 
 
         public void AddSalary() => Saldo += Salary;
+
+        public override string ToString() => $"username: {Username}, Password: {Password}, Salary: {Salary}, Saldo: {Saldo}, Role: {Role}";
     }
     public enum Role
     {

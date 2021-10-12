@@ -42,6 +42,8 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
             this.acceptbtn = new System.Windows.Forms.Button();
             this.denybtn = new System.Windows.Forms.Button();
             this.givesalarybtn = new System.Windows.Forms.Button();
+            this.adduserbtn = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // button2
@@ -115,7 +117,7 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
             // 
             // Logoutbtn
             // 
-            this.Logoutbtn.Location = new System.Drawing.Point(420, 130);
+            this.Logoutbtn.Location = new System.Drawing.Point(420, 159);
             this.Logoutbtn.Name = "Logoutbtn";
             this.Logoutbtn.Size = new System.Drawing.Size(121, 23);
             this.Logoutbtn.TabIndex = 14;
@@ -178,11 +180,32 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
             this.givesalarybtn.UseVisualStyleBackColor = true;
             this.givesalarybtn.Click += new System.EventHandler(this.givesalarybtn_Click);
             // 
+            // adduserbtn
+            // 
+            this.adduserbtn.Location = new System.Drawing.Point(420, 133);
+            this.adduserbtn.Name = "adduserbtn";
+            this.adduserbtn.Size = new System.Drawing.Size(121, 23);
+            this.adduserbtn.TabIndex = 30;
+            this.adduserbtn.Text = "Add User";
+            this.adduserbtn.UseVisualStyleBackColor = true;
+            this.adduserbtn.Click += new System.EventHandler(this.adduserbtn_Click_1);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(12, 188);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(529, 124);
+            this.listBox1.TabIndex = 31;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 160);
+            this.ClientSize = new System.Drawing.Size(547, 325);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.adduserbtn);
             this.Controls.Add(this.givesalarybtn);
             this.Controls.Add(this.denybtn);
             this.Controls.Add(this.acceptbtn);
@@ -218,5 +241,7 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
         private System.Windows.Forms.Button acceptbtn;
         private System.Windows.Forms.Button denybtn;
         private System.Windows.Forms.Button givesalarybtn;
+        private System.Windows.Forms.Button adduserbtn;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

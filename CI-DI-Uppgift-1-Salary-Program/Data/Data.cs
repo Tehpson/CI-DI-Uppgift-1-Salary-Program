@@ -14,7 +14,6 @@ namespace CI_DI_Uppgift_1_Salary_Program.Data
 
             Accounts.Add(new Models.Admin { Username="admin1", Password = "admin1234", Role = Models.Role.Admin });
             Accounts.Add(new Models.User { Username="Abbehh", Password = "Abbehh1234", Role = Models.Role.Janitor });
-            Accounts.Add(new Models.User { Username="", Password = "", Role = Models.Role.Janitor });
             Accounts.Add(new Models.User { Username="Tehpson", Password = "SyperSecurePasswrod!123", Role = Models.Role.CEO });
             Accounts.Add(new Models.User { Username="ViktorPotter65", Password = "TheChosenOne", Role = Models.Role.yeeter });
         }

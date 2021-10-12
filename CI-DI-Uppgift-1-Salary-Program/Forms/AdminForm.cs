@@ -20,6 +20,7 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
             salarylbl.Text = admin.Salary.ToString() + "SEK";
             saldolbl.Text = admin.Salary.ToString() + "SEK";
             Admin = admin;
+            listBox1.DataSource = Data.Data.Accounts;
 
         }
 
@@ -59,6 +60,14 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
         private void givesalarybtn_Click(object sender, EventArgs e)
         {
             Admin.GiveSalary();
+        }
+
+
+        private void adduserbtn_Click_1(object sender, EventArgs e)
+        {
+
+            var frm = new Forms.AddUserForm(Admin,listBox1);
+            frm.Show();
         }
     }
 }

@@ -16,6 +16,7 @@ namespace CI_DI_Uppgift_1_Salary_Program.Models
             User = user;
             Salary = salary;
         }
+        public override string ToString() => $"{User.Username}, ({User.Salary} kr) has requested a new salary of: {Salary} kr.";
     }    
     class RequestRole: Request
     {
@@ -25,5 +26,6 @@ namespace CI_DI_Uppgift_1_Salary_Program.Models
             User = user;
             Role = role;
         }
+        public override string ToString() => $"{User.Username}, ({User.Role}) has requested a new role, being: {Role}.";
     }
 }

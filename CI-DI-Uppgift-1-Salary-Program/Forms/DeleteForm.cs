@@ -25,5 +25,6 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
             UserForm.Close();
             this.Close();
         }
+
     }
 }

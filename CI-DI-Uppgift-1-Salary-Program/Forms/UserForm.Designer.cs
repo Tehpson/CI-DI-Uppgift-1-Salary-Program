@@ -165,7 +165,7 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
             this.button2.TabIndex = 12;
             this.button2.Text = "Delete Account";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // UserForm
             // 

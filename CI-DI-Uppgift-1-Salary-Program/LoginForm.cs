@@ -26,7 +26,7 @@
             }
             else if (account.Role == Models.Role.Admin)
             {
-                var frm = new Forms.AdminForm((Models.Admin)account);
+                var frm = new Forms.AdminForm((Models.Admin)account, this);
                 Hide();
                 frm.ShowDialog();
             }

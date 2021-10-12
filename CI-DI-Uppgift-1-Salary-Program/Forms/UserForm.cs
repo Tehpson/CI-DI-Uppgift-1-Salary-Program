@@ -52,7 +52,7 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             var frm = new DeleteForm(User,this);
             frm.Show();

@@ -9,7 +9,17 @@ namespace CI_DI_Uppgift_1_Salary_Program.Functions
     {
         public static Models.Account Login(string username, string password) => Data.Data.Accounts.Find(x => x.Username == username && x.Password == password);
 
-        internal static void DeleteAccountAdmin(string username, string password) => Data.Data.Accounts.Remove(Data.Data.Accounts.Find(x => x.Username == username && x.Password == password));
+        internal static bool DeleteAccountAdmin(string username, string password)
+        {
+            if(username != "admin1")
+            {
+                return Data.Data.Accounts.Remove(Data.Data.Accounts.Find(x => x.Username == username && x.Password == password));
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         internal static void DeleteAccountUser(User user, string password) => Data.Data.Accounts.Remove(Data.Data.Accounts.Find(x => x == user && x.Password == password));
     }

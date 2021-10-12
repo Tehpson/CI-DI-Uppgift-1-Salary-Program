@@ -23,36 +23,22 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
 
         private void Acceptbtn_Click(object sender, EventArgs e)
         {
-            //var item = Data.Data.Requests.Find();
-            var user = Data.Data.Accounts.Find(x => x == ((Models.Request)requestList.SelectedItem).User);
-            if (requestList.SelectedItem is Models.RequestRole roleitem)
-            {
-                user.Role = roleitem.Role;
-            }
-            else if (requestList.SelectedItem is Models.RequestSalary salaryitem)
-            {
-                user.Salary = salaryitem.Salary;
-            }
-            Data.Data.Requests.Remove((Models.Request)requestList.SelectedItem);
-            requestList.DataSource = null;
-            requestList.Items.Clear();
-            requestList.DataSource = Data.Data.Requests;
+            Models.Admin.AscceptRequest(requestList);
         }
+
 
         private void Denybtn_Click(object sender, EventArgs e)
         {
-            Data.Data.Requests.Remove((Models.Request)requestList.SelectedItem);
-            requestList.DataSource = null;
-            requestList.Items.Clear();
-            requestList.DataSource = Data.Data.Requests;
+            Models.Admin.DenyRequest(requestList);
         }
+
         private void Logoutbtn_Click(object sender, EventArgs e)
         {
             LoginForm.Show();
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
             var frm = new Forms.DeleteAdminForm();
             frm.Show();
@@ -60,10 +46,7 @@ namespace CI_DI_Uppgift_1_Salary_Program.Forms
 
         private void givesalarybtn_Click(object sender, EventArgs e)
         {
-            foreach (var user in Data.Data.Accounts)
-            {
-                user.AddSalary();
-            }
+            Models.Admin.GiveSalary();
         }
     }
 }

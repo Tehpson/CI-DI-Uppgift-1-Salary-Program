@@ -12,7 +12,8 @@ namespace CI_DI_Uppgift_1_Salary_Program.Data.Tests
         [Test()]
         public void FillDataTest()
         {
-            Assert.Fail();
+            Data.FillData();
+            Assert.IsNotNull(Data.Accounts);
         }
     }
 }

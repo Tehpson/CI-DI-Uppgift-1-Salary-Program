@@ -18,4 +18,4 @@ jobs:
     - name: Build
       run: dotnet build CI-DI-Uppgift-1-Salary-Program/CI-DI-Uppgift-1-Salary-Program.sln --no-restore
     - name: Test 
-      run: dotnet test CI-DI-Uppgift-1-Salary-ProgramTests/CI-DI-Uppgift-1-Salary-ProgramTests --no-build --verbosity normal
+      run: dotnet test CI-DI-Uppgift-1-Salary-Program/CI-DI-Uppgift-1-Salary-Program.sln --no-build --verbosity normal

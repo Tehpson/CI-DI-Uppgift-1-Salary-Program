@@ -1,4 +1,4 @@
-name: .Net2
+name: .Net Core 3.1
 
 on:
   push:
@@ -13,10 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.x
     - name: Restore dependencies
       run: dotnet restore CI-DI-Uppgift-1-Salary-Program/CI-DI-Uppgift-1-Salary-Program.sln
     - name: Build
